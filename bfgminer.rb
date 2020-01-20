@@ -23,7 +23,7 @@ class Bfgminer < Formula
   def install
     inreplace "gen-version.sh", "sed", "gsed"
     system "chmod +x *.sh"
-    system "NOSUBMODULES=1 ./autogen.sh"
+    system "./autogen.sh"
     system "chmod +x configure"
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
