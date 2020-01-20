@@ -4,7 +4,7 @@ class Bfgminer < Formula
   homepage 'https://github.com/luke-jr/bfgminer'
   head 'https://github.com/luke-jr/bfgminer.git', :branch => 'bfgminer'
   url 'https://github.com/broberson/bfgminer/releases/download/bfgminer-5.5.0/bfgminer-bfgminer-5.5.0.zip'
-  sha256 '2d26d45b030e90b0f93107aae8348d919228871d8e3e057a3a2a8f86e92032b8'
+  sha256 '92a60ce3be79a0988f078d268fa13ee425920b0b99f8fd87ffeed36e1ff8a099'
   version '5.5.0'
 
   depends_on 'autoconf' => :build
