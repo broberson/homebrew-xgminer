@@ -3,7 +3,7 @@ require 'formula'
 class Bfgminer < Formula
   homepage 'https://github.com/luke-jr/bfgminer'
   head 'https://github.com/luke-jr/bfgminer.git', :branch => 'bfgminer'
-  url 'https://github.com/luke-jr/bfgminer/archive/bfgminer-5.5.0.zip'
+  url 'https://github.com/broberson/bfgminer/releases/download/bfgminer-5.5.0/bfgminer-bfgminer-5.5.0.zip'
   sha256 '2d26d45b030e90b0f93107aae8348d919228871d8e3e057a3a2a8f86e92032b8'
   version '5.5.0'
 
@@ -23,7 +23,7 @@ class Bfgminer < Formula
   def install
     inreplace "gen-version.sh", "sed", "gsed"
     system "chmod +x *.sh"
-    system "./autogen.sh"
+    system "NOSUBMODULES=1 ./autogen.sh"
     system "chmod +x configure"
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
